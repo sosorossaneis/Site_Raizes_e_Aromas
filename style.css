@@ -1,0 +1,136 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de cores */
+:root {
+    --branco: #fff;
+    --preto: #000;
+    --fundo-site: #F5F0E1;
+    --verde: #A3B5AB;
+    --OffWhite: #F5F0E1;
+}
+
+/* Grid */
+.espacoLateral {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Menu */
+/* menu - geral */
+header {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tamanho do Logo */
+header img {
+    width: 431px;
+}
+
+/* Tamanho do menu(Escrito) */
+.menu {
+    max-width: 700px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* menu estilizado */
+.menu a {
+    font-size: 24px;
+    color: #000;
+    /* tira as propriedades(nao parece mais um link) */
+    text-decoration: none;
+    /* Fonte */
+    font-family: "Inria", serif;
+}
+
+/* trocar a cor */
+.menu a:hover {
+    color: #A3B5AB;
+}
+
+/* Menu de hamburguer */
+#iconeBarras,
+#iconeFechar,
+#menuBotao {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #sombraMenu {
+        background-color: var(--OffWhite);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: 0.5s;
+    }
+
+#menuBotao{
+    display: block;
+    z-index: 1;
+}
+
+header{
+    position: relative;
+}
+
+header button{
+    width: 50px;
+
+    background: none;
+    border: none;
+
+    display: unset;
+    cursor: pointer;
+}
+header svg{
+    fill: var(--preto);
+}
+
+#iconeBarras{
+    display: block;
+}
+nav.menu{
+    /* largura e espaço interno */
+    width: 200px;
+    padding: 0px 30px;
+/* posição e espaçamento */
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+/* Posição fixada */
+    position: fixed;
+    top: 165px;
+    right: -210px;
+    z-index: 1;
+    transition: 0.5s;
+}
+}
