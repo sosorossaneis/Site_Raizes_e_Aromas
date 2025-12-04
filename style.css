@@ -1,6 +1,10 @@
 /* Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+* {
+    background-color: var(--fundo-site);
+}
+
 /* Reset css */
 * {
     margin: 0;
@@ -13,7 +17,9 @@
     --branco: #fff;
     --preto: #000;
     --fundo-site: #F5F0E1;
-    --verde: #A3B5AB;
+    --verde: #A8B5A2;
+    --verdeEscuro: #9CAF88;
+    --marrom: #8B6C42;
     --OffWhite: #F5F0E1;
 }
 
@@ -49,7 +55,7 @@ header img {
 /* menu estilizado */
 .menu a {
     font-size: 24px;
-    color: #000;
+    color: var(--preto);
     /* tira as propriedades(nao parece mais um link) */
     text-decoration: none;
     /* Fonte */
@@ -58,7 +64,7 @@ header img {
 
 /* trocar a cor */
 .menu a:hover {
-    color: #A3B5AB;
+    color: var(--verde);
 }
 
 /* Menu de hamburguer */
@@ -93,44 +99,139 @@ header img {
         transition: 0.5s;
     }
 
-#menuBotao{
-    display: block;
-    z-index: 1;
+    #menuBotao {
+        display: block;
+        z-index: 1;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg {
+        fill: var(--preto);
+    }
+
+    #iconeBarras {
+        display: block;
+    }
+
+    nav.menu {
+        /* largura e espaço interno */
+        width: 200px;
+        padding: 0px 30px;
+        /* posição e espaçamento */
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+        /* Posição fixada */
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: 0.5s;
+    }
 }
 
-header{
-    position: relative;
+
+
+
+/* -------------------------Black Friday------------------------------- */
+/* Posição */
+.blackFriday {
+    display: flex;
+    justify-content: center;
+    height: 523px;
+    margin-top: 75px;
+
 }
 
-header button{
-    width: 50px;
-
-    background: none;
-    border: none;
-
-    display: unset;
-    cursor: pointer;
-}
-header svg{
-    fill: var(--preto);
+/* Sombra */
+.blackFriday img {
+    width: 100%;
+    object-fit: scale-down;
 }
 
-#iconeBarras{
-    display: block;
+/* ----------------------------------------TITULOS GERAL------------------------------------ */
+.titulos {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 75px;
+
+    font-size: 25px;
+    font-family: "Inria", "Bold";
+    color: var(--verdeEscuro);
 }
-nav.menu{
-    /* largura e espaço interno */
-    width: 200px;
-    padding: 0px 30px;
-/* posição e espaçamento */
-    flex-direction: column;
+
+/* -----------------------SOBRE NOS------------------------------------- */
+.textos {
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 16px;
+    font-family: "Inria", "Regular";
+
+    width: 150px;
+    margin-left: 700px;
+    margin-top: -200px;
+}
+
+.sobreNos {
+    display: flex;
     justify-content: space-around;
-    gap: 15px;
-/* Posição fixada */
-    position: fixed;
-    top: 165px;
-    right: -210px;
-    z-index: 1;
-    transition: 0.5s;
+    align-items: center;
+    margin-right: 500px;
 }
+
+.sobreNos img {
+    width: 100%;
+    object-fit: scale-down;
 }
+
+#tituloSobre {
+    display: flex;
+    margin-bottom: 85px;
+    margin-top: 100px;
+}
+
+/* BANNER 01 */
+#banner01 {
+    background-image: url(./img/banner-01.png);
+    background-repeat: no-repeat;
+    background-position: 0 100px;
+
+    height: 59vh;
+
+    display: flex;
+    justify-content: space-between;
+    background-size: contain;
+
+margin-top: 50px;
+}
+/* PRODUTOS EM DESTAQUE */
+.imgDestaque123{
+display: flex;
+justify-content: space-evenly;
+
+margin-top: 50px;
+}
+.imgDestaque456{
+display: flex;
+justify-content: space-evenly;
+
+margin-top: 100px;
+
+}
+
